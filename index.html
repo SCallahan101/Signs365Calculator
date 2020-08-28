@@ -11,29 +11,30 @@
     <body>
         <form id="calculator">
             <input id="display" name="display" value="0" disabled>
+            <div id="keysContainer">
             <div id="numberButtons">
-                <input type="button" class="numButons btn" name="AllClear" value="AC"> 
-                <input type="button" class="numButons btn" name="divisible" value="%"> 
-                <input type="button" class="numButons btn" name="" value="+/-"> 
-                <input type="button" class="numButons btn" name="seven" value="7"> 
-                <input type="button" class="numButons btn" name="eight" value="8"> 
-                <input type="button" class="numButons btn" name="nine" value="9"> 
-                <input type="button" class="numButons btn" name="four" value="4"> 
-                <input type="button" class="numButons btn" name="five" value="5"> 
-                <input type="button" class="numButons btn" name="six" value="6">
-                <input type="button" class="numButons btn" name="one" value="1"> 
-                <input type="button" class="numButons btn" name="two" value="2"> 
-                <input type="button" class="numButons btn" name="three" value="3">  
-                <input type="button" class="numButons btn" name="decimal" value="."> 
-                <input type="button" class="numButons btn" name="zero" value="0"> 
-                <input type="button" class="numButons btn" name="equal" value="="> 
-
+                <button type="button" class="numButons AllClear" name="AllClear" value="AllClear">AC</button>
+                <button type="button" class="numButons opButton" name="divisible" value="%">%</button>
+                <button type="button" class="numButons opButton negPos" name="changeInteger" value="+/-">+/-</button>
+                <button type="button" class="numButons btn" name="seven" value="7">7</button>
+                <button type="button" class="numButons btn" name="eight" value="8">8</button>
+                <button type="button" class="numButons btn" name="nine" value="9">9</button> 
+                <button type="button" class="numButons btn" name="four" value="4">4</button> 
+                <button type="button" class="numButons btn" name="five" value="5">5</button> 
+                <button type="button" class="numButons btn" name="six" value="6">6</button> 
+                <button type="button" class="numButons btn" name="one" value="1">1</button>       
+                <button type="button" class="numButons btn" name="two" value="2">2</button>   
+                <button type="button" class="numButons btn" name="three" value="3">3</button>  
+                <button type="button" class="numButons decimal" name="decimal" value=".">.</button>
+                <button type="button" class="numButons btn" name="zero" value="0">0</button>  
+                <button type="button" class="numButons opButton" name="equal" value="=">=</button>     
             </div>
             <div id="operatorButtons">
-                <input type="button" class="opButton btn" name="add" value="+">
-                <input type="button" class="opButton btn" name="subtract" value="-">
-                <input type="button" class="opButton btn" name="multiple" value="x">
-                <input type="button" class="opButton btn" name="divide" value="/"> 
+                <button type="button" class="opButton btn" name="add" value="+">+</button>
+                <button type="button" class="opButton btn" name="subtract" value="-">-</button>
+                <button type="button" class="opButton btn" name="multiple" value="*">x</button>
+                <button type="button" class="opButton btn" name="divide" value="/">/</button> 
+            </div>
             </div>
         </form>
         <script src="calculator.js" async defer></script>
