@@ -9,10 +9,33 @@
         <link rel="stylesheet" href="calculator.css">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
+        <form id="calculator">
+            <input id="display" name="display" value="0" disabled>
+            <div id="numberButtons">
+                <input type="button" class="numButons btn" name="AllClear" value="AC"> 
+                <input type="button" class="numButons btn" name="divisible" value="%"> 
+                <input type="button" class="numButons btn" name="" value="+/-"> 
+                <input type="button" class="numButons btn" name="seven" value="7"> 
+                <input type="button" class="numButons btn" name="eight" value="8"> 
+                <input type="button" class="numButons btn" name="nine" value="9"> 
+                <input type="button" class="numButons btn" name="four" value="4"> 
+                <input type="button" class="numButons btn" name="five" value="5"> 
+                <input type="button" class="numButons btn" name="six" value="6">
+                <input type="button" class="numButons btn" name="one" value="1"> 
+                <input type="button" class="numButons btn" name="two" value="2"> 
+                <input type="button" class="numButons btn" name="three" value="3">  
+                <input type="button" class="numButons btn" name="decimal" value="."> 
+                <input type="button" class="numButons btn" name="zero" value="0"> 
+                <input type="button" class="numButons btn" name="equal" value="="> 
+
+            </div>
+            <div id="operatorButtons">
+                <input type="button" class="opButton btn" name="add" value="+">
+                <input type="button" class="opButton btn" name="subtract" value="-">
+                <input type="button" class="opButton btn" name="multiple" value="x">
+                <input type="button" class="opButton btn" name="divide" value="/"> 
+            </div>
+        </form>
         <script src="calculator.js" async defer></script>
     </body>
 </html>
