@@ -1,4 +1,4 @@
-console.log("start the test");
+// console.log("start the test");
 
 const calculator = {
     displayValue: "0",
@@ -15,7 +15,7 @@ function inputDigit(digit){
     }else {
         calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
     }
-    console.log(calculator);
+    // console.log(calculator);
 }
 function addDecimal(dot){
     if(calculator.waitingForSecondOperand === true){
@@ -27,17 +27,23 @@ function addDecimal(dot){
         calculator.displayValue += dot;
     }
 }
-function changeInteger(sign){
-    let convertedNum = -Math.abs(sign);
-    return "-" + convertedNum;
-}
+// function changeInteger(sign){
+//     if(calculator.waitingForSecondOperand === true){
+//         calculator.displayValue = "-";
+//         calculator.waitingForSecondOperand = false;
+//         return;
+//     }
+//     if(!calculator.displayValue.includes(sign)){
+//         calculator.displayValue += sign;
+//     }
+// }
 function basicOperator(selectedOperator){
     const {firstOperand, displayValue, operator} = calculator;
     const inputValue = parseFloat(displayValue);
 
     if(operator && calculator.waitingForSecondOperand){
         calculator.operator = selectedOperator;
-        console.log(calculator);
+        // console.log(calculator);
         return;
     }
     if(firstOperand === null && !isNaN(inputValue)){
@@ -50,7 +56,7 @@ function basicOperator(selectedOperator){
 
     calculator.waitingForSecondOperand = true;
     calculator.operator = selectedOperator;
-    console.log(calculator);
+    // console.log(calculator);
 }
 
 
@@ -59,7 +65,7 @@ function emptyTheBox(){
     calculator.firstOperand = null;
     calculator.waitingForSecondOperand = false;
     calculator.operator = null;
-    console.log(calculator);
+    // console.log(calculator);
 }
 
 function updateTheDisplay(){
@@ -78,12 +84,17 @@ function calculateResult(firstOperand, secondOperand, operator){
     } else if(operator === '*') {
         return firstOperand * secondOperand;
     }else if(operator === '/'){
-        return firstOperand/secondOperand;
-    }else if(operator === '%'){
-        return firstOperand % secondOperand;
+        return firstOperand / secondOperand;
     }
     return secondOperand;
 }
+// function percentageCal(firstOperand, operator){
+//      if(operator === '%'){
+//         let result = 1000 / firstOperand;
+//         return result;
+//     }
+//     return;
+// }
 
 const btns = document.querySelector('#keysContainer');
 btns.addEventListener('click', (e) => {
@@ -101,11 +112,12 @@ btns.addEventListener('click', (e) => {
         updateTheDisplay();
         return;
     }
-    if(target.classList.contains('negPos')){
-        changeInteger(target.value);
-        updateTheDisplay();
-        return;
-    }
+    // if(target.classList.contains('negPos')){
+    //     console.log("is it even worked?");
+    //     changeInteger(target.value);
+    //     updateTheDisplay();
+    //     return;
+    // }
     if(target.classList.contains('AllClear')){
         emptyTheBox();
         updateTheDisplay();
